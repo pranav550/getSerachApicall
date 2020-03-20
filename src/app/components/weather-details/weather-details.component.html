@@ -1,0 +1,16 @@
+<p>weather-details works!</p>
+<ngx-spinner></ngx-spinner>
+<input type="text" placeholder="Enter City" [(ngModel)]="selected" (input)="selectCity(selected)">
+<button (click)="addFav()">AddToFavouite</button>
+
+
+<div *ngIf="isDisplay">
+    <h2>Name: {{name}}</h2>
+    <h2>Pressure: {{pressure}}</h2>
+    <h2>Humiduty: {{humidity}}</h2>
+
+</div>
+
+<div *ngIf="!isDisplay">
+    <h2>Incorrect Location . Please provide correct Information</h2>
+</div>
